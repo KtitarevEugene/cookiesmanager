@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0
+apiversion: 2
+architectures: armeabi armeabi-v7a x86
+description: cookiesmanager
+author: Your Name
+license: Specify your license
+copyright: Copyright (c) 2016 by Your Company
+
+# these should not be edited
+name: cookiesmanager
+moduleid: com.smartru.flagspree.cookiesmanager
+guid: 3d7da515-a822-4228-8efd-db32caf2270d
+platform: android
+minsdk: 5.1.1.GA
