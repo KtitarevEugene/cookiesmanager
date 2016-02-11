@@ -19,8 +19,10 @@ import org.appcelerator.titanium.util.TiConvert;
 import org.appcelerator.kroll.common.Log;
 
 import android.webkit.CookieManager;
+import android.webkit.CookieSyncManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.ValueCallback;
 
 @Kroll.module(name = "Cookiesmanager", id = "com.smartru.flagspree.cookiesmanager")
 public class CookiesmanagerModule extends KrollModule {
@@ -74,9 +76,11 @@ public class CookiesmanagerModule extends KrollModule {
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	@Kroll.method
 	public void clearAllCookies() {
 		CookieManager cookieManager = CookieManager.getInstance();
+		CookieSyncManager.createInstance(getActivity());
 		cookieManager.removeAllCookie();
 	}
 	
